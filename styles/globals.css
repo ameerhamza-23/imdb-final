@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+.font {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body.light {
+  background: linear-gradient(135deg, #ffffff, #f3e7e9, #e3fdfd, #ffe6fa);
+  background-size: 400% 400%;
+  animation: lightGradientMove 10s ease infinite;
+  color: #000000; /* Text color for light mode */
+}
+
+@keyframes lightGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body.dark{
+  background: linear-gradient(135deg, #000000, #1a1a1a, #333333, #4d4d4d);
+  background-size: 400% 400%;
+  animation: darkGradientMove 15s ease infinite;
+  color: #ffffff; /* Text color for dark mode */
+}
+
+
+@keyframes darkGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Landing Page Styles */
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero-section h1 {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-section a.btn {
+  font-size: 1.1rem;
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.hero-section a.btn-primary {
+  background-color: #ff9900;
+  border: none;
+}
+
+.hero-section a.btn-primary:hover {
+  background-color: #e07b00;
+}
+
+.hero-section a.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}
+
+.hero-section a.btn-secondary:hover {
+  background-color: #545b62;
+}
+
+
+/* Now Starring Section */
+.now-starring {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px; /* Decrease the gap between text and video */
+  padding: 10px; /* Reduce padding around the section */
+}
+
+.now-starring .text-content {
+  flex: 1;
+  margin-bottom: 0; /* Ensure no bottom margin on the text */
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: flex-start; /* Align video */
+  max-width: 800px; /* Limit the video size to match carousel width */
+  margin: 0 auto; /* Center horizontally if needed */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+.video-wrapper iframe {
+  width: 700px; /* Responsive width */
+  height: 400px; /* Set height explicitly */
+  border-radius: 10px; /* Rounded corners */
+  border: none; /* Remove border */
+}
+
+
+
+
+
+
+
+
+/* Carousel Section */
+.carousel-section {
+  background-color: #1a1a1a; /* Dark background for better contrast */
+  padding: 20px;
+  border-radius: 15px; /* Rounded edges for the carousel container */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+  margin: 20px auto; /* Center the carousel with some spacing */
+}
+
+.carousel-section h2 {
+  color: #ffffff; /* Light text for better visibility on dark background */
+  margin-bottom: 20px;
+}
+
+.carousel img {
+  height: 400px; /* Adjust the height of the carousel images */
+  object-fit: cover; /* Ensure images are cropped properly */
+  border-radius: 10px; /* Rounded edges for the images */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for images */
+  border: 2px solid #ffffff; /* Optional border around images */
+}
+
+
+
+
+/* Movie detail page */
+.movie-poster {
+  flex: 1; /* Allow the poster to take up one part of the space */
+  max-width: 400px; /* Set a maximum width for the poster */
+}
+
+.movie-details {
+  flex: 2; /* Allow the details section to take up more space */
+  text-align: left; /* Ensure the text aligns to the left */
+}
+
+@media (max-width: 768px) {
+  .movie-poster {
+    margin-bottom: 20px; /* Add spacing below the poster on smaller screens */
+  }
+}
+
+
+
+/* trending page */
+.card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  border-radius: 8px;
+  width: 100%; /* Ensure the image takes up the full width of the card */
+  height: auto; /* Allow the height to adjust based on the image's aspect ratio */
+  max-height: 450px; /* Optional: Set a max height to prevent overly large images */
+  object-fit: contain; /* Ensure the entire poster fits without cropping */
+}
+
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* about */
+h1 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+img {
+  max-height: 400px;
+  object-fit: cover;
+}
